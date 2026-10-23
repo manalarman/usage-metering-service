@@ -503,7 +503,7 @@ npm test
 
 The test global setup **drops and recreates** the `metering_test` database (never the main `metering` database), then migrates and seeds it. The tests then talk to the real PostgreSQL through Supertest, plus a real HTTP listener for concurrency and client tests.
 
-Latest run: **9 files, 61 tests, 61 passed, 0 failed** (about 17 s).
+Latest run: **9 files, 61 tests, 61 passed, 0 failed** (about 11–17 s depending on machine load).
 
 | File                          | Covers                                                                                       |
 |-------------------------------|----------------------------------------------------------------------------------------------|
@@ -551,6 +551,16 @@ Tunables (`-e NAME=value`): `API_URL`, `ADMIN_TOKEN`, `VUS`, `DURATION`, `ACCOUN
 | `multi_account`: 50 VUs, 10 accounts, 30 s      | 8,016    | ~267 req/s | 187 / 167 / 277 / **337** / 907 ms              | 0.00 %      |
 | `single_account`: 50 VUs, 1 account, 30 s       | 4,262    | ~142 req/s | 353 / 356 / 411 / **457** / 570 ms              | 0.00 %      |
 | `quota-race`: 100 VUs, 1 account, 3,000 iterations | 3,025 (incl. setup) | ~118 req/s | 825 / 806 / 969 / **1,020** / 1,360 ms | 0.00 %      |
+
+A second run during the pre-submission audit, on the same build and machine with the same scripts (`load/results/rerun/`), measured somewhat better numbers. Expect noticeable run-to-run variance on a shared developer machine:
+
+| Scenario (audit re-run)                         | Requests | Throughput | Latency avg / p50 / p90 / p95 / max            | HTTP errors |
+|-------------------------------------------------|---------:|-----------:|------------------------------------------------|------------:|
+| `multi_account`: 50 VUs, 10 accounts, 30 s      | 9,751    | ~325 req/s | 154 / 144 / 212 / **244** / 555 ms              | 0.00 %      |
+| `single_account`: 50 VUs, 1 account, 30 s       | 5,090    | ~170 req/s | 296 / 306 / 331 / **339** / 388 ms              | 0.00 %      |
+| `quota-race`: 100 VUs, 1 account, 3,000 iterations | 3,025 (incl. setup) | ~156 req/s | 623 / 597 / 738 / **765** / 985 ms   | 0.00 %      |
+
+The re-run's correctness results matched the first run: race 1000 accepted / 2000 rejected (no overspend); account usage = Σ user usage for all 10 throughput accounts; `verify:consistency` OK (17,126 decisions).
 
 Correctness under load (from the k6 `teardown` checks and `verify:consistency`):
 

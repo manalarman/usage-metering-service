@@ -50,6 +50,9 @@ services:
     depends_on:
       api:
         condition: service_healthy
+    # The image's HEALTHCHECK probes the API port, which the one-shot client does not serve.
+    healthcheck:
+      disable: true
     restart: "no"
 
 volumes:
