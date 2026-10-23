@@ -1,0 +1,45 @@
+time="2026-10-23T10:13:10Z" level=info msg="allowance=1000 account_consumed=1000 users_sum=1000 remaining=0" source=console
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate==1.0' rate=100.00%
+
+    http_req_failed
+    ✓ 'rate==0' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 3002    109.507501/s
+    checks_succeeded...................: 100.00% 3002 out of 3002
+    checks_failed......................: 0.00%   0 out of 3002
+
+    ✓ status 200
+    ✓ account consumed exactly the allowance (no overspend)
+    ✓ account usage == sum(user usage)
+
+    CUSTOM
+    race_accepted...........................................................: 1000   36.478181/s
+    race_rejected...........................................................: 2000   72.956363/s
+
+    HTTP
+    http_req_duration.......................................................: avg=887.7ms  min=3.88ms  med=748.92ms max=1.97s p(90)=1.2s p(95)=1.74s
+      { expected_response:true }............................................: avg=887.7ms  min=3.88ms  med=748.92ms max=1.97s p(90)=1.2s p(95)=1.74s
+    http_req_failed.........................................................: 0.00%  0 out of 3025
+    http_reqs...............................................................: 3025   110.346499/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=895.62ms min=61.62ms med=751.11ms max=1.97s p(90)=1.2s p(95)=1.74s
+    iterations..............................................................: 3000   109.434544/s
+    vus.....................................................................: 50     min=50        max=100
+    vus_max.................................................................: 100    min=100       max=100
+
+    NETWORK
+    data_received...........................................................: 3.2 MB 119 kB/s
+    data_sent...............................................................: 825 kB 30 kB/s
+
+
+
+time="2026-10-23T10:13:10Z" level=error msg="failed to handle the end-of-test summary" error="Could not save some summary information:\n\t- could not open '/load/results/quota-race-summary.json': open /load/results/quota-race-summary.json: permission denied"

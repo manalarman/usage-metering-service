@@ -1,0 +1,2 @@
+checked 45 account-months; decisions=37560 accepted=33556
+OK: account usage == sum(user usage) == sum(accepted units) for every account-month

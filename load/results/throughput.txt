@@ -1,0 +1,65 @@
+time="2026-10-23T10:18:35Z" level=info msg="account 971a95c1-f2b1-4acd-bb32-fc8e7a08f306: account=26595 users_sum=26595" source=console
+time="2026-10-23T10:18:35Z" level=info msg="account 3d571ec7-bcf1-4f3a-8072-70e911f20576: account=4251 users_sum=4251" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account d5301875-6196-44ef-82a0-acd7af8fc732: account=4242 users_sum=4242" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account f3915168-f321-4f06-96e3-6ee7f3cf14e8: account=4129 users_sum=4129" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account a718fdbd-485e-4e82-b83a-fa7cd5ef6072: account=4236 users_sum=4236" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account c0c84b14-740a-4e77-ac1f-8eb9ee99172f: account=4126 users_sum=4126" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account 755173bf-dfe7-4fb1-a365-46120c861295: account=4274 users_sum=4274" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account 4936f078-1e0c-4789-8b39-658aedfed6c3: account=4089 users_sum=4089" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account bd16c392-d52e-45c9-b8a8-7d9ae0424ecd: account=4148 users_sum=4148" source=console
+time="2026-10-23T10:18:36Z" level=info msg="account 2c06f62f-12ea-459d-a532-dd13bdfeae32: account=4341 users_sum=4341" source=console
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate==1.0' rate=100.00%
+
+    http_req_duration{scenario:multi_account}
+    ✓ 'p(95)<500' p(95)=336.98ms
+
+    http_req_duration{scenario:single_account}
+    ✓ 'p(95)<1000' p(95)=456.58ms
+
+    http_req_failed{scenario:multi_account}
+    ✓ 'rate<0.01' rate=0.00%
+
+    http_req_failed{scenario:single_account}
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 12288   181.385101/s
+    checks_succeeded...................: 100.00% 12288 out of 12288
+    checks_failed......................: 0.00%   0 out of 12288
+
+    ✓ status 200
+    ✓ account usage == sum(user usage)
+
+    CUSTOM
+    consume_accepted..........................................................: 11711  172.867913/s
+    consume_replayed..........................................................: 567    8.369576/s
+
+    HTTP
+    http_req_duration.........................................................: avg=236.25ms min=2.59ms  med=201.7ms  max=906.84ms p(90)=383.57ms p(95)=410.47ms
+      { expected_response:true }..............................................: avg=236.25ms min=2.59ms  med=201.7ms  max=906.84ms p(90)=383.57ms p(95)=410.47ms
+      { scenario:multi_account }..............................................: avg=187.06ms min=19.06ms med=166.74ms max=906.84ms p(90)=276.81ms p(95)=336.98ms
+      { scenario:single_account }.............................................: avg=353.14ms min=27.6ms  med=356.31ms max=569.84ms p(90)=411.16ms p(95)=456.58ms
+    http_req_failed...........................................................: 0.00%  0 out of 12728
+      { scenario:multi_account }..............................................: 0.00%  0 out of 8016
+      { scenario:single_account }.............................................: 0.00%  0 out of 4262
+    http_reqs.................................................................: 12728  187.88001/s
+
+    EXECUTION
+    iteration_duration........................................................: avg=245.26ms min=19.38ms med=208.84ms max=907.44ms p(90)=386.04ms p(95)=412.55ms
+    iterations................................................................: 12278  181.237489/s
+    vus.......................................................................: 0      min=0          max=50 
+    vus_max...................................................................: 100    min=100        max=100
+
+    NETWORK
+    data_received.............................................................: 10 MB  154 kB/s
+    data_sent.................................................................: 3.5 MB 51 kB/s
+
+
+

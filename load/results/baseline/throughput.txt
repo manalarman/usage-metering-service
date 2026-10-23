@@ -1,0 +1,55 @@
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate==1.0' rate=100.00%
+
+    http_req_duration{scenario:multi_account}
+    ✓ 'p(95)<500' p(95)=358.5ms
+
+    http_req_duration{scenario:single_account}
+    ✓ 'p(95)<1000' p(95)=770.97ms
+
+    http_req_failed{scenario:multi_account}
+    ✓ 'rate<0.01' rate=0.00%
+
+    http_req_failed{scenario:single_account}
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 9948    145.62829/s
+    checks_succeeded...................: 100.00% 9948 out of 9948
+    checks_failed......................: 0.00%   0 out of 9948
+
+    ✓ status 200
+    ✓ account usage == sum(user usage)
+
+    CUSTOM
+    consume_accepted..........................................................: 9452   138.36737/s
+    consume_replayed..........................................................: 486    7.11453/s
+
+    HTTP
+    http_req_duration.........................................................: avg=289.53ms min=2.75ms   med=225.44ms max=1.42s    p(90)=527.72ms p(95)=627.57ms
+      { expected_response:true }..............................................: avg=289.53ms min=2.75ms   med=225.44ms max=1.42s    p(90)=527.72ms p(95)=627.57ms
+      { scenario:multi_account }..............................................: avg=214.76ms min=104.01ms med=196.31ms max=748.13ms p(90)=312.86ms p(95)=358.5ms 
+      { scenario:single_account }.............................................: avg=508.47ms min=23.42ms  med=473.3ms  max=1.42s    p(90)=682.07ms p(95)=770.97ms
+    http_req_failed...........................................................: 0.00%  0 out of 10388
+      { scenario:multi_account }..............................................: 0.00%  0 out of 6974
+      { scenario:single_account }.............................................: 0.00%  0 out of 2964
+    http_reqs.................................................................: 10388  152.069428/s
+
+    EXECUTION
+    iteration_duration........................................................: avg=303.01ms min=25.59ms  med=232.93ms max=1.42s    p(90)=532.82ms p(95)=635.03ms
+    iterations................................................................: 9938   145.4819/s
+    vus.......................................................................: 0      min=0          max=50 
+    vus_max...................................................................: 100    min=100        max=100
+
+    NETWORK
+    data_received.............................................................: 8.5 MB 125 kB/s
+    data_sent.................................................................: 2.8 MB 41 kB/s
+
+
+

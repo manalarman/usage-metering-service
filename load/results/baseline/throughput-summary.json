@@ -1,0 +1,456 @@
+{
+    "metrics": {
+        "http_req_waiting": {
+            "avg": 289.30069191615235,
+            "min": 2.51528,
+            "med": 225.2044315,
+            "max": 1420.984715,
+            "p(90)": 527.4708654000002,
+            "p(95)": 627.36845485
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "iteration_duration": {
+            "med": 232.93364400000002,
+            "max": 1421.628192,
+            "p(90)": 532.8255605,
+            "p(95)": 635.0390317499998,
+            "avg": 303.01185919309756,
+            "min": 25.595234
+        },
+        "consume_replayed": {
+            "count": 486,
+            "rate": 7.114530443421019
+        },
+        "checks": {
+            "passes": 9948,
+            "fails": 0,
+            "thresholds": {
+                "rate==1.0": false
+            },
+            "value": 1
+        },
+        "http_req_receiving": {
+            "max": 11.661521,
+            "p(90)": 0.19643710000000003,
+            "p(95)": 0.2248302,
+            "avg": 0.14497149297266063,
+            "min": 0.030805,
+            "med": 0.1323225
+        },
+        "http_req_duration{scenario:single_account}": {
+            "p(90)": 682.0712979000002,
+            "p(95)": 770.9704958,
+            "avg": 508.4761296912946,
+            "min": 23.429275,
+            "med": 473.30555100000004,
+            "max": 1421.20194,
+            "thresholds": {
+                "p(95)<1000": false
+            }
+        },
+        "http_req_duration{scenario:multi_account}": {
+            "avg": 214.7641379098086,
+            "min": 104.013697,
+            "med": 196.3141265,
+            "max": 748.13594,
+            "p(90)": 312.8640901,
+            "p(95)": 358.50186610000003,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        },
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(95)": 627.57862615,
+            "avg": 289.53773388852585,
+            "min": 2.756608,
+            "med": 225.449001,
+            "max": 1421.20194,
+            "p(90)": 527.7264946
+        },
+        "consume_accepted": {
+            "count": 9452,
+            "rate": 138.36736985846807
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 10388,
+            "value": 0
+        },
+        "http_reqs": {
+            "count": 10388,
+            "rate": 152.06942849024188
+        },
+        "vus": {
+            "value": 0,
+            "min": 0,
+            "max": 50
+        },
+        "http_req_sending": {
+            "p(95)": 0.10806629999999996,
+            "avg": 0.09207047939930692,
+            "min": 0.010802,
+            "med": 0.06571250000000001,
+            "max": 24.948139,
+            "p(90)": 0.089413
+        },
+        "data_received": {
+            "count": 8509814,
+            "rate": 124574.75467253168
+        },
+        "http_req_failed{scenario:single_account}": {
+            "passes": 0,
+            "fails": 2964,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_duration": {
+            "avg": 289.53773388852585,
+            "min": 2.756608,
+            "med": 225.449001,
+            "max": 1421.20194,
+            "p(90)": 527.7264946,
+            "p(95)": 627.57862615
+        },
+        "http_req_blocked": {
+            "max": 34.586136,
+            "p(90)": 0.010001300000000001,
+            "p(95)": 0.013602,
+            "avg": 0.08646132393145867,
+            "min": 0.002999,
+            "med": 0.006701
+        },
+        "data_sent": {
+            "count": 2819347,
+            "rate": 41272.284078328645
+        },
+        "http_req_failed{scenario:multi_account}": {
+            "passes": 0,
+            "fails": 6974,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_connecting": {
+            "min": 0,
+            "med": 0,
+            "max": 33.456807,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.07052096226415096
+        },
+        "iterations": {
+            "count": 9938,
+            "rate": 145.48190030188908
+        }
+    },
+    "setup_data": {
+        "accounts": [
+            {
+                "accountId": "24fcb8f7-e978-4f81-8e1f-ade1389e0510",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "accountId": "b02491cb-ec40-492f-9646-e6bdd7a1356c",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "accountId": "74ccc377-18d2-4714-83fb-65bbfdf324a3",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "accountId": "db46b036-f925-4c8d-808b-f27c33e22a2b",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "accountId": "d686cd7a-4908-4555-a461-00c2ebdf4831",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ],
+                "accountId": "afb7ad70-04b5-43dd-b39a-937642a41b1e",
+                "apiKey": "umk_<redacted>"
+            },
+            {
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ],
+                "accountId": "5afab3b5-2ffe-430f-b288-9f03ff7fc947"
+            },
+            {
+                "accountId": "61fca0b7-763b-4057-91f7-05bc4c55273e",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "accountId": "4a8ee2dd-d191-4d5d-bb60-4b10670bfab2",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            },
+            {
+                "accountId": "18400ebf-72b6-4784-a4fb-53d9a5cad4f6",
+                "apiKey": "umk_<redacted>",
+                "users": [
+                    "user-0",
+                    "user-1",
+                    "user-2",
+                    "user-3",
+                    "user-4",
+                    "user-5",
+                    "user-6",
+                    "user-7",
+                    "user-8",
+                    "user-9",
+                    "user-10",
+                    "user-11",
+                    "user-12",
+                    "user-13",
+                    "user-14",
+                    "user-15",
+                    "user-16",
+                    "user-17",
+                    "user-18",
+                    "user-19"
+                ]
+            }
+        ]
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "teardown": {
+                "path": "::teardown",
+                "id": "a8a9942382e8ffe2e56ef29e664b8229",
+                "groups": {},
+                "checks": {
+                        "account usage == sum(user usage)": {
+                            "name": "account usage == sum(user usage)",
+                            "path": "::teardown::account usage == sum(user usage)",
+                            "id": "8b29e3a61ae364d88659f666596a2aee",
+                            "passes": 10,
+                            "fails": 0
+                        }
+                    },
+                "name": "teardown"
+            }
+        },
+        "checks": {
+            "status 200": {
+                "id": "fad9fa412b86fcb03bee97c80dcd61f1",
+                "passes": 9938,
+                "fails": 0,
+                "name": "status 200",
+                "path": "::status 200"
+            }
+        }
+    }
+}
